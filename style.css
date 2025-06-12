@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #29abe2;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo img {
+  height: 60px;
+}
+
+nav {
+  flex-grow: 1;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.login {
+  background-color: white;
+  color: #29abe2;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.left-column {
+  flex: 2;
+}
+
+.right-column {
+  flex: 1;
+}
+
+.box,
+.cell {
+  height: 30px;
+  background-color: white;
+  border: 3px solid #29abe2;
+  margin-bottom: 5px;
+}
+
+.box-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.table-box .row {
+  display: flex;
+  gap: 5px;
+}
+
+.table-box .cell {
+  flex: 1;
+}
