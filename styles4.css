@@ -4,7 +4,7 @@
             padding: 0;
         }
         .navbar {
-         background-color: #0056b3;
+            background-color: #38a6dd;
              overflow: hidden;
             display: flex;
             align-items: center;
@@ -27,13 +27,13 @@
          }
         
         .navbar a:hover {
-             background-color: #0056b3;
+            background-color: #38a6dd;
              border-radius: 50px;
              color: #010415;
         }
 
         .container {
-         background-color: #0056b3;
+            background-color: #38a6dd;
             padding: 30px;
             border-radius: 10px;
             color: white;
@@ -52,7 +52,7 @@
             border-radius: 5px;
         }
         button {
-         background-color: #0056b3;
+             background-color: #38a6dd;
             color: white;
             border: none;
             padding: 20px;
@@ -61,5 +61,5 @@
             width: 100%;
         }
         button:hover {
-            background-color: #005580;
+            background-color: #38a6dd;
         }
