@@ -1,88 +1,96 @@
-body {
+b* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 
-header {
-  background-color: #29abe2;
-  display: flex;
-  align-items: center;
-  padding: 10px;
+body {
+  background-color: #f9f9f9;
 }
 
-.logo img {
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00aaff;
+  padding: 15px 30px;
+}
+
+.logo {
   height: 60px;
 }
 
-nav {
-  flex-grow: 1;
-}
-
-nav ul {
-  display: flex;
-  justify-content: flex-end;
+.navbar nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  gap: 20px;
 }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
+.navbar nav a {
   text-decoration: none;
   color: white;
   font-weight: bold;
 }
 
-.login {
+.login-btn {
   background-color: white;
-  color: #29abe2;
-  padding: 5px 10px;
+  color: #00aaff;
+  border: none;
+  padding: 8px 16px;
   border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.container {
+.home-section {
+  padding: 60px 40px;
+}
+
+.home-content {
   display: flex;
-  padding: 20px;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
 }
 
-.left-column,
-.right-column {
+.text-area {
+  max-width: 600px;
+}
+
+.text-area h1 {
+  color: #00aaff;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.text-area p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.button-group {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
-.left-column {
-  flex: 2;
+.btn {
+  padding: 10px 20px;
+  border: 2px solid #00aaff;
+  color: #00aaff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
-.right-column {
-  flex: 1;
+.btn.blue {
+  background-color: #00aaff;
+  color: white;
 }
 
-.box,
-.cell {
-  height: 30px;
-  background-color: white;
-  border: 3px solid #29abe2;
-  margin-bottom: 5px;
-}
-
-.box-group {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.table-box .row {
-  display: flex;
-  gap: 5px;
-}
-
-.table-box .cell {
-  flex: 1;
+.image-area img {
+  max-width: 400px;
+  width: 100%;
 }
