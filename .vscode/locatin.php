@@ -74,14 +74,15 @@
       margin: 40px 0;
     }
 
-    .location-button button {
+    .location-link {
       background-color: #3ab4f2;
       color: white;
-      border: none;
       padding: 20px 60px;
       font-size: 24px;
       border-radius: 4px;
-      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: bold;
     }
 
     @media (max-width: 768px) {
@@ -121,7 +122,9 @@
   </div>
 
   <div class="location-button">
-    <button>Geographical location</button>
+    <a href="https://www.google.com/maps/place/Deir+Dibwan,+Ramallah/" target="_blank" class="location-link">
+      Geographical location
+    </a>
   </div>
 
 </body>
