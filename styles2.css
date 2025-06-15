@@ -4,7 +4,7 @@
             padding: 0;
         }
         .navbar {
-         background-color: #0056b3;
+            background-color: #38a6dd;
              overflow: hidden;
             display: flex;
             align-items: center;
@@ -27,7 +27,7 @@
          }
         
         .navbar a:hover {
-             background-color: #0056b3;
+            background-color: #38a6dd;
              border-radius: 50px;
              color: #010415;
         }
@@ -57,7 +57,7 @@
             object-fit: cover;
         }
         .box button {
-            background-color: #0056b3;
+            background-color: #38a6dd;
             border: none;
             color: white;
             padding: 10px 60px;
@@ -68,7 +68,7 @@
                transition: color 0.3s , transform 0.3s;
         }
         .box button:hover {
-    background-color: #0056b3;
+            background-color: #38a6dd;
     transform: scale(1.05);
     
         }
@@ -76,14 +76,14 @@
             background-color: #a5abb1;
         }
          .footer {
-            background-color: #0056b3; 
+            background-color: #38a6dd;
             padding: 20px 0;  
             text-align: center;  
             margin-top: 40px;  
         }
         .footer button {
             background-color: white;  
-            color: #007BFF;  
+            color: #38a6dd;
             border: none;
             padding: 10px 20px;  
             margin: 0 50px;
@@ -92,7 +92,7 @@
             font-size: 16px;  
         }
         .footer button:hover {
-            background-color: #0056b3;  
+            background-color: #38a6dd;
             color: white;  
         }
 
