@@ -1,4 +1,4 @@
-   body {
+  body {
             font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             margin: 0;
             padding: 0;
@@ -96,13 +96,3 @@
             color: white;  
         }
 
- .button {
-            background-color: #38a6dd;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            margin: 0 10px;
-            cursor: pointer;
-            text-decoration: none;
-            border-radius: 5px;
-        }
