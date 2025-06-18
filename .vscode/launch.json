@@ -5,6 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         
+<<<<<<< HEAD
+=======
+
+>>>>>>> c85cd97b57c7d228f018e47876e1ae595cd80de7
         {
             "type": "chrome",
             "request": "launch",
