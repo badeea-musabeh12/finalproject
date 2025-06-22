@@ -123,7 +123,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <label for="price">Daily Rental Price</label>
     <input type="text" name="price" id="price" required>
 
-    <label for="condition">Number of chair</label>
+    <label for="condition">Number of Chairs</label>
     <input name="condition" id="condition" required>
       
 
