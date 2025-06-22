@@ -147,13 +147,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <label for="price">Daily Rental Price</label>
     <input type="text" name="price" id="price" value="<?= htmlspecialchars($car['Daily_rental _price']) ?>" required>
 
-    <label for="condition">Car Condition</label>
-    <select name="condition" id="condition" required>
-      <option value="New" <?= $car['condition'] === 'New' ? 'selected' : '' ?>>New</option>
-      <option value="Used" <?= $car['condition'] === 'Used' ? 'selected' : '' ?>>Used</option>
-      <option value="Excellent" <?= $car['condition'] === 'Excellent' ? 'selected' : '' ?>>Excellent</option>
-    </select>
-
+    <label for="condition">Number of chdir</label>
+    <input name="condition" id="condition" required>
+      
     <label for="imagecar">Car Image (optional)</label>
     <input type="file" name="imagecar" id="imagecar" accept="image/*">
 

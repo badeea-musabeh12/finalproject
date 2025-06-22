@@ -123,12 +123,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <label for="price">Daily Rental Price</label>
     <input type="text" name="price" id="price" required>
 
-    <label for="condition">Car Condition</label>
-    <select name="condition" id="condition" required>
-      <option value="New">New</option>
-      <option value="Used">Used</option>
-      <option value="Excellent">Excellent</option>
-    </select>
+    <label for="condition">Number of chair</label>
+    <input name="condition" id="condition" required>
+      
 
     <label for="imagecar">Car Image</label>
     <input type="file" name="imagecar" id="imagecar" accept="image/*">
