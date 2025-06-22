@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>إدخال مستأجر جديد</title>
+</head>
+<body>
+    <h2>نموذج إضافة مستأجر</h2>
+    <form action="insert_renter.php" method="post">
+        <label>الاسم الكامل:</label><br>
+        <input type="text" name="full_name" required><br><br>
+
+        <label>الجنسية:</label><br>
+        <input type="text" name="nationality" required><br><br>
+
+        <label>العنوان:</label><br>
+        <input type="text" name="address" required><br><br>
+
+        <label>رقم الهاتف:</label><br>
+        <input type="text" name="telephone" required><br><br>
+
+        <label>رقم الهوية:</label><br>
+        <input type="text" name="id_no" required><br><br>
+
+        <label>تاريخ الميلاد:</label><br>
+        <input type="date" name="birth_date" required><br><br>
+
+        <label>رقم رخصة القيادة:</label><br>
+        <input type="text" name="driver_licence_no" required><br><br>
+
+        <label>تاريخ إصدار الرخصة:</label><br>
+        <input type="date" name="licence_issue_date" required><br><br>
+
+        <label>تاريخ انتهاء الرخصة:</label><br>
+        <input type="date" name="licence_exp_date" required><br><br>
+
+        <input type="submit" value="إرسال">
+    </form>
+</body>
+</html>
