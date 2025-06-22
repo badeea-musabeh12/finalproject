@@ -15,10 +15,10 @@
          <div class="navbar">
  
             <img  src="img/icons.png" alt="logo" class="logo">
-         <a href="#"> Home</a>
-        <a href="index2.html">Cars</a>
-        <a href="#">Location</a>
-        <a href="index4.html">  Contact us</a>
+         <a href="home.html"> Home</a>
+        <a href="Cars..html">Cars</a>
+        <a href="location..html">Location</a>
+        <a href="contact us.html">  Contact us</a>
         <a href="#">Log in  </a>
 
      </div>
