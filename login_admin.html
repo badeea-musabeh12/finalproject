@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom right, #f0f8ff, #e6f7ff);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(49, 173, 231, 0.3);
+      border: 2px solid #31ADE7;
+      width: 350px;
+      text-align: center;
+    }
+
+    .login-container h2 {
+      color: #31ADE7;
+      margin-bottom: 25px;
+    }
+
+    .login-container input[type="email"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 2px solid #31ADE7;
+      border-radius: 8px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .login-container input:focus {
+      border-color: #219ecb;
+    }
+
+    .login-container button {
+      background-color: #31ADE7;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .login-container button:hover {
+      background-color: #219ecb;
+    }
+
+    .login-container a {
+      display: block;
+      margin-top: 15px;
+      color: #219ecb;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .login-container a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>تسجيل دخول المشرف</h2>
+    <form action="login_admin.php" method="POST">
+      <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+      <input type="password" name="password" placeholder="كلمة المرور" required>
+      <button type="submit">تسجيل الدخول</button>
+    </form>
+    <a href="register_admin.html">إنشاء حساب مشرف جديد</a>
+  </div>
+
+</body>
+</html>

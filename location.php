@@ -36,7 +36,8 @@
   <a href="https://www.google.com/maps/place/Deir+Dibwan,+Ramallah/" target="_blank">
     <button>Geographical location</button>
   </a>
-</div>        </div>
+</div>     
+  </div>
    
 </main>
 </body>
