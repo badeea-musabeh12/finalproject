@@ -30,6 +30,7 @@
            
             <br>
             <p>Whether you're planning a weekend getaway or a cross-country adventure, we've got you covered. With our wide selection of vehicles and convenient booking system, renting a car has never been this effortless.</p>
+            <p>Ramallah-Dire Dibwan 0566551020-022896036</p>
              <br>
             <div class="buttons">
                 <a href="Cars..html" class="button">Cars</a>

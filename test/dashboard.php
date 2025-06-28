@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['admin_ID'])) {
-  header("Location: login_admin.php");
+  header("Location: admin.php");
   exit();
 }
 ?>
@@ -11,7 +11,6 @@ if (!isset($_SESSION['admin_ID'])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Admin Dashboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -99,22 +98,9 @@ if (!isset($_SESSION['admin_ID'])) {
   </div>
 
   <div class="sidebar">
-    <a href="#" onclick="loadPage('home.php')">🏠 Home</a>
-    <a href="#" onclick="loadPage('car_index.php')">🚗 Cars</a>
-    <a href="#" onclick="loadPage('reservations_index.php')">📋 Reservations</a>
-    <a href="#" onclick="loadPage('client.php')">👤 Clients</a>
-    <a href="#" onclick="loadPage('settings.php')">⚙️ Settings</a>
+    <a href="car.php">🚗 Cars</a>
   </div>
 
-  <div class="main">
-    <iframe id="content-frame" src="home_welcome.php"></iframe>
-  </div>
-
-  <script>
-    function loadPage(page) {
-      document.getElementById("content-frame").src = page;
-    }
-  </script>
-
+ 
 </body>
 </html>

@@ -101,6 +101,7 @@ $result = $conn->query("SELECT * FROM car");
   <?php endif; ?>
 </td>
       <td>
+        <a href="reserve.php?id=<?= $row['car_ID'] ?>" class="action-btn edit-btn">Edit</a>
         <a href="edit_car.php?id=<?= $row['car_ID'] ?>" class="action-btn edit-btn">Edit</a>
         <a href="delete_car.php?id=<?= $row['car_ID'] ?>" class="action-btn delete-btn" onclick="return confirm('Are you sure you want to delete this car?');">Delete</a>
       </td>
