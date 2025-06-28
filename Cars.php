@@ -91,7 +91,7 @@ $result = $conn->query($sql);
           <h3><?= htmlspecialchars($car['Brand']) ?> <?= htmlspecialchars($car['Model']) ?> <?= htmlspecialchars($car['Sunnah']) ?></h3>
           <p>₪<?= htmlspecialchars($car['Daily_rental _price']) ?> per day</p>
           <p>7 Chairs</p> <!-- You can make this dynamic if you add chair count in DB -->
-          <a href="customer_information.html" class="button">Reserve</a>
+          <a href="reservations_index.php" class="button">Reserve</a>
         </div>
       <?php endwhile; ?>
     <?php else: ?>
