@@ -5,22 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cars</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="admin.css">
-<style></style>
-  
+  <link rel="stylesheet" href="stylesadmin.css">
+
+  <style>
+    body {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+
+    .navbar {
+      background-color: #38a6dd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    .navbar img {
+      height: 80px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 30px;
+      font-size: 20px;
+      margin: 0 10px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      border-radius: 50px;
+      transition: color 0.3s, background-color 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: white;
+      color: #010415;
+    }
+
+    table {
+      width: 95%;
+      margin: 40px auto;
+      border-collapse: collapse;
+      background-color: white;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    th {
+      background-color: #f3f3f3;
+      font-weight: bold;
+    }
+
+    tr {
+      height: 40px;
+    }
+
+    footer {
+      background-color: #38a6dd;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 40px;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    footer button {
+      background-color: white;
+      color: #38a6dd;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    footer button:hover {
+      background-color: #38a6dd;
+      color: white;
+    }
+  </style>
 </head>
 <body>
- <div class="navbar">
- 
-            <img  src="img/icons.png" alt="logo" class="logo">
-         <a href="home.html"> Home</a>
-        <a href="Cars..html">Cars</a>
-        <a href="location..html">Location</a>
-        <a href="contact us.html">  Contact us</a>
-        <a href="login_admin.html">Log in  </a>
 
-     </div>
- 
+  <div class="navbar">
+    <img src="img/icons.png" alt="logo" class="logo">
+    <a href="home.html">Home</a>
+    <a href="Cars..html">Cars</a>
+    <a href="location..html">Location</a>
+    <a href="contact us.html">Contact us</a>
+    <a href="#">Log in</a>
+  </div>
 
   <table>
     <tr>
@@ -31,7 +116,8 @@
       <th>Car color</th>
       <th>Tenant name</th>
     </tr>
-    
+    <!-- 25 صف فارغ -->
+    <!-- بإمكانك تغييرها لاحقاً -->
     <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
     <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
     <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
@@ -60,8 +146,8 @@
   </table>
 
   <footer>
-<br>
-  
+    💙 شكراً لزيارتك يا دندونتي 💙<br>
+    نورتِ موقعنا... نتمنى لك يوماً جميلاً مليئاً بالنجاح والسعادة 😊
     <br><br>
     <button onclick="window.location.href='home.html'">الصفحة الرئيسية</button>
     <button onclick="window.location.href='contact us.html'">تواصل معنا</button>
@@ -69,22 +155,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
