@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['admin_ID'])) {
-  header("Location: admin.php");
+  header("Location: login_admin.php");
   exit();
 }
 ?>
@@ -11,6 +11,7 @@ if (!isset($_SESSION['admin_ID'])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Admin Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -65,14 +66,6 @@ if (!isset($_SESSION['admin_ID'])) {
       margin-left: 220px;
       padding: 30px;
     }
-    iframe {
-      width: 100%;
-      height: 80vh;
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      background-color: white;
-    }
     .logout-btn {
       background-color: #ffffff;
       color: #31ADE7;
@@ -98,9 +91,16 @@ if (!isset($_SESSION['admin_ID'])) {
   </div>
 
   <div class="sidebar">
+    <a href="home.php">🏠 Home</a>
     <a href="car.php">🚗 Cars</a>
+    <a href="reservations.php">📋 Reservations</a>
+    <a href="client.php">👤 Clients</a>
   </div>
 
- 
+  <div class="main">
+    <h2>Welcome to the Admin Dashboard</h2>
+    <p>Select a page from the sidebar</p>
+  </div>
+
 </body>
 </html>
