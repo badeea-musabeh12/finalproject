@@ -1,25 +1,77 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #38a6dd;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 14px 20px;
+        }
+        .navbar img {
+            width: auto;
+            height: 150px;
+            margin-right: 5px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 30px;
+            text-align: center;
+            margin: 0 50px;
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #38a6dd;
+            border-radius: 50px;
+            color: #010415;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #38a6dd;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
 </head>
 <body>
     <header>
-         <div class="navbar">
- 
-            <img  src="img/icons.png" alt="logo" class="logo">
-         <a href="home.html"> Home</a>
-        <a href="Cars..html">Cars</a>
-        <a href="location..html">Location</a>
-        <a href="contact us.html">  Contact us</a>
-        <a href="#">Log in  </a>
-
-     </div>
- 
-     </header>
-    <table border="1">
+        <div class="navbar">
+            
+            <img src="hooog.png" alt="logo" class="">
+            <a href="home.php">Home</a>
+            <a href="car.php">Cars</a>
+            <a href="location.php">Location</a>
+            <a href="contact us.php">Contact us</a>
+            <a href="login.php">Log in</a>
+        </div>
+    </header>
+    <table>
         <tr>
             <th>#</th>
             <th>admin_ID</th>
@@ -27,23 +79,23 @@
             <th>email</th>
             <th>password</th>
         </tr>
-    <?php
-require_once('connect.php');
-$i=1;
-$sql = "SELECT * FROM `admin`";
-$res_admin = mysqli_query($conn, $sql);
-while($row_admin = mysqli_fetch_array($res_admin)){
-    echo '<tr>';
-    echo '<td>'.$i.'</td>';
-    echo '<td>'.$row_admin['admin_ID'].'</td>';
-    echo '<td>'.$row_admin['name'].'</td>';
-    echo '<td>'.$row_admin['email'].'</td>';
-    echo '<td>'.$row_admin['password'].'</td>';
-    
-    echo '</tr>';
-    $i++;
-}
-    ?>
+        <?php
+        require_once('connect.php');
+        $i = 1;
+        $sql = "SELECT * FROM admin";
+        $res_admin = mysqli_query($conn, $sql);
+        while ($row_admin = mysqli_fetch_array($res_admin)) {
+            echo '<tr>';
+            echo '<td>' . $i . '</td>';
+            echo '<td>' . $row_admin['admin_ID'] . '</td>';
+            echo '<td>' . $row_admin['name'] . '</td>';
+            echo '<td>' . $row_admin['email'] . '</td>';
+            echo '<td>' . $row_admin['password'] . '</td>';
+            echo '</tr>';
+            $i++;
+        }
+        ?>
     </table>
+ 
 </body>
 </html>
