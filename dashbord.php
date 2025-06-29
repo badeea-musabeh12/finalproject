@@ -1,8 +1,8 @@
 <?php
 session_start();
 if (!isset($_SESSION['admin_ID'])) {
-  header("Location: login_admin.php");
-  exit();
+  // header("Location: login_admin.php");
+  // exit();
 }
 ?>
 <!DOCTYPE html>
@@ -99,22 +99,15 @@ if (!isset($_SESSION['admin_ID'])) {
   </div>
 
   <div class="sidebar">
-    <a href="#" onclick="loadPage('home.php')">🏠 Home</a>
-    <a href="#" onclick="loadPage('car_index.php')">🚗 Cars</a>
-    <a href="#" onclick="loadPage('reservations_index.php')">📋 Reservations</a>
-    <a href="#" onclick="loadPage('client.php')">👤 Clients</a>
-    <a href="#" onclick="loadPage('settings.php')">⚙️ Settings</a>
+    <a href="home.php">🏠 Home</a>
+    <a href="car_index.php">🚗 Cars</a>
+    <a href="reservations_index.php">📋 Reservations</a>
+    <a href="client.php">👤 Clients</a>
+    <a href="settings.php">⚙️ Settings</a>
   </div>
 
-  <div class="main">
-    <iframe id="content-frame" src="home_welcome.php"></iframe>
-  </div>
-
-  <script>
-    function loadPage(page) {
-      document.getElementById("content-frame").src = page;
-    }
-  </script>
+ 
+ 
 
 </body>
 </html>
