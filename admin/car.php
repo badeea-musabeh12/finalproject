@@ -10,7 +10,33 @@
         background-color: #f9f9f9;
         padding: 20px;
     }
-
+    .navbar {
+            background-color: #38a6dd;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 14px 20px;
+        }
+        .navbar img {
+            width: auto;
+            height: 150px;
+            margin-right: 5px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 30px;
+            text-align: center;
+            margin: 0 50px;
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #38a6dd;
+            border-radius: 50px;
+            color: #010415;
+        }
     table {
         width: 100%;
         border-collapse: collapse;
@@ -57,6 +83,16 @@
 
 </head>
 <body>
+      <header>
+        <div class="navbar">
+            <img src="img/icons.png" alt="logo" class="">
+            <a href="home.html">Home</a>
+            <a href="Cars..html">Cars</a>
+            <a href="location..html">Location</a>
+            <a href="contact us.html">Contact us</a>
+            <a href="#">Log in</a>
+        </div>
+    </header>
     <table border="1">
         <tr>
             <th>#</th>

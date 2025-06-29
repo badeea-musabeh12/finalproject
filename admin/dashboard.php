@@ -21,66 +21,38 @@ if (!isset($_SESSION['admin_ID'])) {
       margin: 0;
       background: #f4f9fc;
     }
-    .navbar {
-      background-color: #31ADE7;
-      color: white;
-      padding: 15px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .navbar h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-    .navbar a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .sidebar {
-      width: 200px;
-      background-color: #ffffff;
-      position: fixed;
-      top: 60px;
-      bottom: 0;
-      border-right: 1px solid #e0e0e0;
-      padding: 20px;
-    }
-    .sidebar a {
-      display: block;
-      margin: 10px 0;
-      color: #333;
-      text-decoration: none;
-      padding: 8px;
-      border-radius: 8px;
-      transition: background 0.3s;
-      font-weight: bold;
-    }
-    .sidebar a:hover {
-      background-color: #31ADE7;
-      color: white;
-    }
-    .main {
-      margin-left: 220px;
-      padding: 30px;
-    }
-    .logout-btn {
-      background-color: #ffffff;
-      color: #31ADE7;
-      border: 2px solid #ffffff;
-      padding: 6px 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-      text-decoration: none;
-    }
-    .logout-btn:hover {
-      background-color: #ffffff;
-      color: red;
-      border-color: red;
-    }
+     body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #38a6dd;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 14px 20px;
+        }
+        .navbar img {
+            width: auto;
+            height: 150px;
+            margin-right: 5px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 30px;
+            text-align: center;
+            margin: 0 50px;
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #38a6dd;
+            border-radius: 50px;
+            color: #010415;
+        }
   </style>
 </head>
 <body>
@@ -89,13 +61,15 @@ if (!isset($_SESSION['admin_ID'])) {
     <h1>Admin Dashboard</h1>
     <a href="logout_admin.php" class="logout-btn">Log Out</a>
   </div>
-
-  <div class="sidebar">
-    <a href="home.php">🏠 Home</a>
-    <a href="car.php">🚗 Cars</a>
-    <a href="reservations.php">📋 Reservations</a>
-    <a href="client.php">👤 Clients</a>
-  </div>
+ <div class="navbar">
+            
+            <img src="hooog.png" alt="logo" class="">
+            <a href="home.php">Home</a>
+            <a href="car.php">Cars</a>
+            <a href="location.php">Location</a>
+            <a href="contact us.php">Contact us</a>
+            <a href="login.php">Log in</a>
+        </div>
 
   <div class="main">
     <h2>Welcome to the Admin Dashboard</h2>
