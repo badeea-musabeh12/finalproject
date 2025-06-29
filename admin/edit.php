@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: admin_login.php");
+    header("Location: car.php");
     exit();
 }
 
@@ -16,7 +16,7 @@ if ($_SESSION['role'] !== 'admin') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تعديل المدير </title>
+    <title>تعديل السيارة</title>
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
@@ -24,18 +24,18 @@ if ($_SESSION['role'] !== 'admin') {
 require_once('../connect.php');
 $id = $_GET['id'];
 $sql = "SELECT * FROM admin WHERE a_id = $id";
-$res_cat = mysqli_query($conn, $sql);
-if($row_cat = mysqli_fetch_assoc($res_cat)) {
-    $name = $row_cat['name'];
-    $username = $row_cat['username'];
-    $password = $row_cat['password'];
+$res_car = mysqli_query($conn, $sql);
+if($row_car = mysqli_fetch_assoc($res_car)) {
+    $name = $row_car['name'];
+    $username = $row_car['username'];
+    $password = $row_car['password'];
 } else 
-    echo "<p>المدير غير موجود.</p>";
+    echo "<p>السيارة غير موجود.</p>";
 ?>
     <form action="admin _update.php" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo $id;?>">
         <table class="form">
-    <caption>تعديل المدير </caption>
+    <caption>تعديل السيارة </caption>
                 <tr>
                 <td><label for="name">الاسم:</label></td>
                 <td><input type="text" name="name" id="name" value="<?php echo $name;?>"></td>
