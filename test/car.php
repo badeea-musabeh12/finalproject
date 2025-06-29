@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add car</title>
+    <title>car</title>
     <style>
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -67,14 +67,15 @@
             <th>Daily_rental_price</th>
             <th>condition</th>
             <th>imagecar</th>
-            
+                       
         </tr>
         <a href="add_car.php">Add New Car ➕</a>
-         <a href="update_car.php"> update car</a>
          
+       
         
     <?php
 require_once('connect.php');
+
 $i=1;
 $sql = "SELECT * FROM `car`";
 $res_car = mysqli_query($conn, $sql);
@@ -88,7 +89,12 @@ while($row_car = mysqli_fetch_array($res_car)){
     echo '<td>'.$row_car['Daily_rental_price'].'</td>';
     echo '<td>'.$row_car['condition'].'</td>';
     echo '<td><img src = "../img/'.$row_car['imagecar'].'" width="80px"></td>';
-    
+    echo '<td>';
+    echo '<div class="btn"><a href="delete_car.php">Delete</a>';
+    echo '</td>';
+    echo '<td>';
+    echo '<div class="btn"><a href="update_car.php">Update</a>';
+    echo '</td>';
     
     echo '</tr>';
     $i++;
