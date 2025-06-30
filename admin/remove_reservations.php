@@ -12,10 +12,10 @@ if ($_SESSION['role'] !== 'reservation') {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-    require_once('../connect.php');
+    require_once('connect.php');
     $id = $_POST['id'];
     if(isset($_POST['yes'])){
-        $sql = "DELETE FROM admin WHERE a_id = $id";
+        $sql = "DELETE FROM reservations WHERE reservations_id = $id";
         if(mysqli_query($conn, $sql))
         {
             echo 'succed';

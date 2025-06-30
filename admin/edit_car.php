@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['role'])) {
+if (!isset($_SESSION['role']))  {
     // header("Location: admin.php");
     echo "لا تملك صلاحية الوصول لهذه الصفحة.";
     exit();
@@ -24,7 +24,7 @@ if ($_SESSION['role'] !== 'admin') {
 <?php
 require_once('connect.php');
 $id = $_GET['id'];
-$sql = "SELECT * FROM car WHERE a_id = $id";
+$sql = "SELECT * FROM car WHERE car_id = $id";
 $res_cat = mysqli_query($conn, $sql);
 if($row_cat = mysqli_fetch_assoc($res_cat)) {
     $car_ID = $row_cat['car_ID'];
@@ -37,16 +37,13 @@ if($row_cat = mysqli_fetch_assoc($res_cat)) {
 } else 
     echo "<p>المدير غير موجود.</p>";
 ?>
-    <form action="car_update.php" method="post" enctype="multipart/form-data">
+    <form action="update_car.php" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo $id;?>">
         <table class="form">
     <caption>Edit car</caption>
-                <tr>
-                <td><label for="car_ID">car_ID</label></td>
-                <td><input type="car_ID" name="car_ID" id="car_ID" value="<?php echo $car_ID;?>"></td>
-            </tr>
+            
             <tr>
-                <td><label for="Model"></label></td>
+                <td><label for="Model">Model</label></td>
                 <td><input type="Model" name="Model" id="Model" value="<?php echo $Model;?>"></td>
             </tr>
             <tr>

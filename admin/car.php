@@ -119,7 +119,7 @@ while($row_car = mysqli_fetch_array($res_car)){
     echo '<td>'.$row_car['condition'].'</td>';
     echo '<td><img src = "../img/'.$row_car['imagecar'].'" width="80px"></td>';
     echo '<td>';
-    echo '<div class="btn"><a href="delete_car.php">Delete</a>';
+    echo '<div class="btn"><a href="delete_car.php?id='.$row_car['car_ID'].'">Delete</a>';
     echo '</td>';
     echo '<td>';
     echo '<div class="btn"><a href="edit_car.php?id='.$row_car['car_ID'].'">edit</a>';

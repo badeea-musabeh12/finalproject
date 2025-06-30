@@ -12,6 +12,7 @@ if ($_SESSION['role'] !== 'admin') {
     exit();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -24,7 +25,7 @@ if ($_SESSION['role'] !== 'admin') {
 <?php
 require_once('connect.php');
 $id = $_GET['id'];
-$sql = "SELECT * FROM client WHERE a_id = $id";
+$sql = "SELECT * FROM client WHERE Customer_id = $id";
 $res_cat = mysqli_query($conn, $sql);
 if($row_cat = mysqli_fetch_assoc($res_cat)) {
     $Cusromer_ID = $row_cat['Cusromer_ID'];
@@ -40,10 +41,7 @@ if($row_cat = mysqli_fetch_assoc($res_cat)) {
         <input type="hidden" name="id" value="<?php echo $id;?>">
         <table class="form">
     <caption>Edit car</caption>
-                <tr>
-                <td><label for="Cusromer_ID">Cusromer_ID</label></td>
-                <td><input type="Cusromer_ID" name="Cusromer_ID" id="Cusromer_ID" value="<?php echo $Cusromer_ID;?>"></td>
-            </tr>
+               
             <tr>
                 <td><label for="Client_name"></label></td>
                 <td><input type="Client_name" name="Client_name" id="Client_name" value="<?php echo $Client_name;?>"></td>

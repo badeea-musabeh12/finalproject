@@ -19,20 +19,12 @@ if ($_SESSION['role'] !== 'admin') {
   <title>Admin Dashboard</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
-    }
     body {
-      margin: 0;
-      background: #f4f9fc;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9f9f9;
+        padding: 20px;
     }
-     body {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar {
+    .navbar {
             background-color: #38a6dd;
             overflow: hidden;
             display: flex;
@@ -65,7 +57,7 @@ if ($_SESSION['role'] !== 'admin') {
 
   <div class="navbar">
     <h1>Admin Dashboard</h1>
-    <a href="logout_admin.php" class="logout-btn">Log Out</a>
+    <a href="logout.php" class="logout-btn">Log Out</a>
   </div>
  <?php
   include_once('menu.php');

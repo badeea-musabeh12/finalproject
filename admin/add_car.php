@@ -1,3 +1,16 @@
+<?php
+session_start();
+if (!isset($_SESSION['role'])) {
+    // header("Location: admin.php");
+    echo "لا تملك صلاحية الوصول لهذه الصفحة.";
+    exit();
+}
+
+if ($_SESSION['role'] !== 'admin') {
+    echo "لا تملك صلاحية الوصول لهذه الصفحة.";
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
