@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
     <style>
-        body {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar {
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9f9f9;
+        padding: 20px;
+    }
+.navbar {
             background-color: #38a6dd;
             overflow: hidden;
             display: flex;
@@ -81,7 +81,7 @@
             echo '<td>' . $i . '</td>';
             echo '<td>' . $row_admin['admin_ID'] . '</td>';
             echo '<td>' . $row_admin['name'] . '</td>';
-            echo '<td>' . $row_admin['email'] . '</td>';
+            echo '<td>' . $row_admin['username'] . '</td>';
             echo '<td>' . $row_admin['password'] . '</td>';
             echo '</tr>';
             $i++;
