@@ -29,9 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $year = $_POST['year'];
   $price = $_POST['price'];
   $condition = $_POST['condition'];
-
-  // Handle new image upload (optional)
-  $image_name = $car['imagecar']; // keep old image by default
+  $image_name = $car['imagecar']; 
   if (isset($_FILES['imagecar']) && $_FILES['imagecar']['error'] == 0) {
     $allowed = ['jpg', 'jpeg', 'png', 'gif'];
     $file_name = $_FILES['imagecar']['name'];
@@ -70,7 +68,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <meta charset="UTF-8" />
   <title>Edit Car</title>
   <style>
-    /* Same styles as add_car */
     body {
       font-family: 'Roboto', sans-serif;
       background-color: #f4f9fc;
