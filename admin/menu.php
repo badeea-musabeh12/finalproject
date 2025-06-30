@@ -5,6 +5,6 @@
             <a href="car.php">car</a>
             <a href="admin.php">admin</a>
             <a href="client.php">client</a>
-            <a href="#">Log out</a>
+            <a href="logout.php">Log out</a>
         </div>
     </header>
