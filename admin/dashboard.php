@@ -61,15 +61,9 @@ if (!isset($_SESSION['admin_ID'])) {
     <h1>Admin Dashboard</h1>
     <a href="logout_admin.php" class="logout-btn">Log Out</a>
   </div>
- <div class="navbar">
-            
-            <img src="hooog.png" alt="logo" class="">
-            <a href="home.php">Home</a>
-            <a href="car.php">Cars</a>
-            <a href="location.php">Location</a>
-            <a href="contact us.php">Contact us</a>
-            <a href="login.php">Log in</a>
-        </div>
+ <?php
+  include_once('menu.php');
+ ?>
 
   <div class="main">
     <h2>Welcome to the Admin Dashboard</h2>

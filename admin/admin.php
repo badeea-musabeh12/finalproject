@@ -60,17 +60,9 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            
-            <img src="hooog.png" alt="logo" class="">
-            <a href="home.php">Home</a>
-            <a href="car.php">Cars</a>
-            <a href="location.php">Location</a>
-            <a href="contact us.php">Contact us</a>
-            <a href="login.php">Log in</a>
-        </div>
-    </header>
+     <?php
+      include_once('menu.php');
+      ?>
     <table>
         <tr>
             <th>#</th>

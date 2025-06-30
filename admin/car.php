@@ -83,16 +83,9 @@
 
 </head>
 <body>
-      <header>
-        <div class="navbar">
-            <img src="img/icons.png" alt="logo" class="">
-            <a href="home.html">Home</a>
-            <a href="Cars..html">Cars</a>
-            <a href="location..html">Location</a>
-            <a href="contact us.html">Contact us</a>
-            <a href="#">Log in</a>
-        </div>
-    </header>
+        <?php
+      include_once('menu.php');
+      ?>
     <table border="1">
         <tr>
             <th>#</th>
