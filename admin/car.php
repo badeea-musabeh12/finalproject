@@ -89,7 +89,7 @@
     <table border="1">
         <tr>
             <th>#</th>
-            <th>car_ID</th>
+            <!-- <th>car_ID</th> -->
             <th>Model</th>
             <th>Brand</th>
             <th>Sunnah</th>
@@ -111,7 +111,7 @@ $res_car = mysqli_query($conn, $sql);
 while($row_car = mysqli_fetch_array($res_car)){
     echo '<tr>';
     echo '<td>'.$i.'</td>';
-    echo '<td>'.$row_car['car_ID'].'</td>';
+    // echo '<td>'.$row_car['car_ID'].'</td>';
     echo '<td>'.$row_car['Model'].'</td>';
     echo '<td>'.$row_car['Brand'].'</td>';
     echo '<td>'.$row_car['Sunnah'].'</td>';
@@ -122,7 +122,7 @@ while($row_car = mysqli_fetch_array($res_car)){
     echo '<div class="btn"><a href="delete_car.php">Delete</a>';
     echo '</td>';
     echo '<td>';
-    echo '<div class="btn"><a href="update_car.php">Update</a>';
+    echo '<div class="btn"><a href="edit_car.php?id='.$row_car['car_ID'].'">edit</a>';
     echo '</td>';
     
     echo '</tr>';

@@ -61,18 +61,18 @@
     <?php
     require_once('connect.php');
     if(isset($_POST['submit'])){
-        $reservitons_ID = $_POST['reservitons_ID'];
+        $reservitons_ID = $_POST['reservaitons_ID'];
         $car_ID= $_POST['car_ID'];
         $customer_ID = $_POST['customer_ID'];
         $startdate = $_POST['startdate'];
-        $enddate = $_POST['enddate'];
+        $endDate = $_POST['endDate'];
         $totalPrice=$_POST['totalPrice'];
         $counter_start=$_POST['counter_start'];
         $counter_end=$_POST['counter_end']
         
         $sql = "INSERT INTO `reservations`
-            (`reservitons_ID`, `car_ID`,`customer_ID`, `startdate`, `enddate`, `totalPrice`, `counter_start` ,`counter_end`) VALUES
-            ('$reservitons_ID', '$car_ID', '$customer_ID','$startdate', '$enddate', '$totalPrice', '$counter_start','$counter_end')";
+            (`reservaitons_ID`, `car_ID`,`customer_ID`, `startdate`, `enddate`, `totalPrice`, `counter_start` ,`counter_end`) VALUES
+            ('$reservaitons_ID', '$car_ID', '$customer_ID','$startdate', '$endDate', '$totalPrice', '$counter_start','$counter_end')";
         mysqli_query($conn, $sql);
         header('Location: reservitons.php');
     }
@@ -85,8 +85,8 @@
 <form action="add_client.php" method="post" enctype="multipart/form-data">
 <table class="form"> 
     <tr>
-        <td><label for="reservitons_ID">reservitons_ID</label></td>
-        <td><input type="text" name="reservitons_ID" id="reservitons_ID"></td>
+        <td><label for="reservaitons_ID">reservaitons_ID</label></td>
+        <td><input type="text" name="reservaitons_ID" id="reservaitons_ID"></td>
     </tr>
     <tr>
      <td><label for="car_ID">car_ID</label></td>
@@ -101,8 +101,8 @@
         <td><input type="text" name="startdate" id="startdate"></td>
     </tr>
     <tr>
-         <td><label for="enddate">enddate</label></td>
-         <td><input type="text" name="enddate" id="enddate"></td>
+         <td><label for="endDate">endDate</label></td>
+         <td><input type="text" name="endDate" id="endDate"></td>
     </tr>
     <tr>
 

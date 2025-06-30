@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_POST['id'];
 
     if (is_numeric($id)) {
-        require_once('include/connect.php');
+        require_once('connect.php');
         $sql = "SELECT * FROM `car` WHERE `id` = $id";
         $res_car = mysqli_query($conn, $sql);
 
