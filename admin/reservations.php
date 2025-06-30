@@ -89,10 +89,10 @@ while($row_reservations = mysqli_fetch_array($res_reservations)){
     echo '<td>'.$row_reservations['counter_start'].'</td>';
      echo '<td>'.$row_reservations['counter_end'].'</td>';
      echo '<td>';
-    echo '<div class="btn"><a href="delete_reservtions.php">Delete</a>';
+    echo '<div class="btn"><a href="delete_reservations.php">Delete</a>';
     echo '</td>';
     echo '<td>';
-    echo '<div class="btn"><a href="update_reservtions.php">Update</a>';
+    echo '<div class="btn"><a href="update_reservations.php">Update</a>';
     echo '</td>';
     
     echo '</tr>';

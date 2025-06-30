@@ -16,17 +16,17 @@ session_start();
     <?php 
 
      if($_SERVER['REQUEST_METHOD']=='POST'){
-        $user = validate_input($_POST['pass']);
-        $pass = anc_pw(validate_input($_POST['pass']));
+        $user = $_POST['user'];
+        $pass = md5($_POST['pass']);
         require_once('connect.php');
         $sql = "SELECT * FROM `admin` WHERE `username` = '$user' AND  `password` = '$pass'";
         $res_admin = mysqli_query($conn, $sql);
         if(mysqli_num_rows($res_admin) > 0){
-            $row_admin = mysqli_query_fetch_array($res_admin);
-            $_SESSION['id'] = $row_admin['id'];
+            $row_admin = mysqli_fetch_array($res_admin);
+            $_SESSION['id'] = $row_admin['admin_ID'];
             $_SESSION['name'] = $row_admin['name'];
             $_SESSION['username'] = $row_admin['username'];
-            $_SESSION['password'] = enc_pw($row_admin['password']);
+            $_SESSION['role'] = 'admin';
             header ('location:car.php');
 
         }
@@ -37,7 +37,7 @@ session_start();
     
     ?>
     
-     <form action="">
+     <form method = "post">
         <table class="form">
             <tr>
                 <td><label for="user">username</label></td>
@@ -45,7 +45,7 @@ session_start();
             </tr>
             <tr>
                 <td><label for="pass">passowrd</label></td>
-                <td><input type="passowrd" name="pass" id="pass"></td>
+                <td><input type="password" name="pass" id="pass"></td>
             </tr>
             <tr>
                 <td colspan="2"><input type="submit" value="login"></label></td>
