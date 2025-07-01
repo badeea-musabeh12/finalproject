@@ -16,7 +16,7 @@ if ($_SESSION['role'] !== 'admin') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>add_client</title>
+    <title>Add_admin</title>
 <style>
 
     body {
@@ -74,54 +74,64 @@ if ($_SESSION['role'] !== 'admin') {
     <?php
     require_once('connect.php');
     if(isset($_POST['submit'])){
-        $Customer_ID = $_POST['Customer_ID'];
-        $Client_name= $_POST['Client_name'];
-        $Phone = $_POST['Phone'];
-        $date_of_birth = $_POST['date_of_birth'];
-        $license = $_POST['license'];
-        
-        $sql = "INSERT INTO `client`
-            (`Customer_ID`, `Client_name`, `Phone`, `ID_number`, `date_of_birth`, `license`) VALUES
-            ('$Customer_ID', '$Client_name', '$Phone', '$ID_number', '$date_of_birth', '$license')";
+        $name = $_POST['name'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $role = $_POST['role'];
+        $sql = "INSERT INTO `admin`
+            (`name`, `username`, `password`, `role`) VALUES
+            ('$name', '$username', '$password', '$role')";
         mysqli_query($conn, $sql);
-        header('Location: client.php');
+        header('Location: admin.php');
     }
     ?>
     
     <div class = "btn">
-    <a  harf="client.php"></a>
+    <a  harf="admin.php"></a>
 </div>
-<h1>Add new client</h1>
-<form action="add_client.php" method="post" enctype="multipart/form-data">
+<h1>Add new admin</h1>
+<form action="add_admin.php" method="post" enctype="multipart/form-data">
+`, `Sunnah`, `Daily_rental_price`, `condition`, `imagecar`) VALUES
+            ('$car_model', '$car_brand', '$year', '$price', '$chair', '$img')";
+        mysqli_query($conn, $sql);
+        header('Location: car.php');
+    }
+    ?>
+    
+    <div class = "btn">
+    <a  harf="car.php"></a>
+</div>
+<h1>Add new car</h1>
+<form action="add_car.php" method="post" enctype="multipart/form-data">
 <table class="form"> 
     <tr>
-        <td><label for="Customer_ID">CustomerID</label></td>
-        <td><input type="text" name="Customer_ID" id="Customer_ID"></td>
+        <td><label for="car_model">Car Model</label></td>
+        <td><input type="text" name="car_model" id="car_model"></td>
     </tr>
     <tr>
-     <td><label for="Client_name">Client name</label></td>
-        <td><input type="text" name="Client_name" id="Client_name"></td>
+     <td><label for="car_brand">Car Brand</label></td>
+        <td><input type="text" name="car_brand" id="car_brand"></td>
     </tr>
     <tr>
-        <td><label for="Phone">Phone</label></td>
-        <td><input type="text" name="Phone" id="Phone"></td>
+        <td><label for="year">Manufacture Year</label></td>
+        <td><input type="text" name="year" id="year"></td>
     </tr>
     <tr>
-        <td><label for="ID_number">ID_number</label></td>
-        <td><input type="text" name="ID_number" id="ID_number"></td>
+        <td><label for="price">Daily Rental Price</label></td>
+        <td><input type="text" name="price" id="price"></td>
     </tr>
     <tr>
-         <td><label for="date_of_birth">date_of_birth</label></td>
-         <td><input type="text" name="date_of_birth" id="date_of_birth"></td>
+         <td><label for="chair">Number of chairs</label></td>
+         <td><input type="text" name="chair" id="chair"></td>
     </tr>
     <tr>
 
     </tr>
-        <td><label for="license">license</label></td>
-        <td> <input type="text" name="license" id="license"></td>
+        <td><label for="img">Car img</label></td>
+        <td> <input type="file" name="img" id="img" accept="image/*"></td>
     <tr>
         
-        <td colspan="2"><input type="submit" name="submit" value="Add new  client➕"></td>
+        <td colspan="2"><input type="submit" name="submit" value="Add new car➕"></td>
 
     </tr>
 </table>

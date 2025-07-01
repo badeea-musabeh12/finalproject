@@ -16,7 +16,7 @@ if ($_SESSION['role'] !== 'admin') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>delet car</title>
+    <title>delet admin</title>
     <style>
         body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -74,17 +74,17 @@ require_once('connect.php');
 if(isset($_GET['id'])){
     $id = $_GET['id'];
     if(is_numeric($id)){
-        $sql = "SELECT * FROM car WHERE car_id = $id";
-        $res_car = mysqli_query($conn, $sql);
-        if(mysqli_num_rows($res_car) > 0){
-            $row_car = mysqli_fetch_assoc($res_car);
+        $sql = "SELECT * FROM admin WHERE admin_ID = $id";
+        $res_admin = mysqli_query($conn, $sql);
+        if(mysqli_num_rows($res_admin) > 0){
+            $row_admin = mysqli_fetch_assoc($res_admin);
 ?>
-<form action="remove_car.php" method="post">
+<form action="remove_admin.php" method="post">
     <input type="hidden" name="id" value="<?php echo $id; ?>">
     <table class="form">
-        <caption>delete car</caption>
+        <caption>delete admin</caption>
         <tr>
-            <td>Are you sure you want to delete?<?php echo $row_car['car_ID']; ?>؟</td>
+            <td>Are you sure you want to delete?<?php echo $row_admin['admin_ID']; ?>؟</td>
             <td><input type="submit" name="yes" value="yes"></td>
             <td><input type="submit" name="no" value="no"></td>
         </tr>
@@ -93,15 +93,15 @@ if(isset($_GET['id'])){
 <?php
         }
         else{
-            header("Location: car.php");
+            header("Location: admin.php");
         }
     }       
     else{
-        header("Location: car.php");
+        header("Location: admin.php");
     }
 }
 else{
-    header("Location: car.php");
+    header("Location: admin.php");
 }
 ?>
 <?php
